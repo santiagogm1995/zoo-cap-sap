@@ -1,0 +1,32 @@
+{
+  "name": "ZooInNode",
+  "version": "1.0.0",
+  "description": "A simple CAP project.",
+  "repository": "<Add your repository here>",
+  "license": "UNLICENSED",
+  "private": true,
+  "dependencies": {
+    "@sap/cds": "^3.34.2",
+    "@sap/hana-client": "^2.5.105",
+    "express": "^4",
+    "npm-run-all": "^4.1.5",
+    "passport": "^0.4.1",
+    "sqlite3": "^5.0.0"
+  },
+  "scripts": {
+    "build": "cds build",
+    "deploy-db": "cds deploy",
+    "start-cmd": "cds run",
+    "start": "npx cds run"
+  },
+  "cds": {
+    "hana": {
+      "deploy-format": "hdbtable"
+    },
+    "requires": {
+      "db": {
+        "kind": "hana"
+      }
+    }
+  }
+}
