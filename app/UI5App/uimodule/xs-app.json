@@ -1,0 +1,20 @@
+{
+  "welcomeFile": "webapp/index.html",
+  "authenticationMethod": "none",
+  "logout": {
+    "logoutEndpoint": "/do/logout"
+  },
+  "routes": [
+    {
+      "source": "^/webapp/(.*)$",
+      "target": "$1",
+      "authenticationType": "none",
+      "localDir": "webapp"
+    },
+    {
+      "source": "^/getAnimals",
+      "target": "/Animal",
+      "destination": "getAnimals"
+    }
+  ]
+}

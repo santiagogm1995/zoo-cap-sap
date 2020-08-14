@@ -1,0 +1,15 @@
+{
+  "name": "webapp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "Component.js",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {
+    "@sap/approuter": "^6.8.2"
+  },
+  "scripts": {
+    "start": "node node_modules/@sap/approuter/approuter.js"
+  }
+}
