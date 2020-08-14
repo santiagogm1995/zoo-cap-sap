@@ -5,41 +5,12 @@
     <pages>
       <Page title="{i18n>title}">
         <content>
-          <Table id="idProductsTable" inset="false" items="{
-			path: '/AnimalsCollection',
-			sorter: {
-				path: 'Name'
-			}
-		}">
-            <headerToolbar>
-              <OverflowToolbar>
-                <content>
-                  <Title text="Animals" level="H2"/>
-                </content>
-              </OverflowToolbar>
-            </headerToolbar>
-            <infoToolbar>
-              <OverflowToolbar>
-                <Label text="Wide range of available products"/>
-              </OverflowToolbar>
-            </infoToolbar>
-            <columns>
-              <Column width="12em">
-                <Text text="Nombre" />
-              </Column>
-              <Column width="12em">
-                <Text text="Tipo" />
-              </Column>
-            </columns>
-            <items>
-              <ColumnListItem>
-                <cells>
-                  <Text text="{nombre}" />
-                  <Text text="{typo}" />
-                </cells>
-              </ColumnListItem>
-            </items>
-          </Table>
+          <Panel headerText="Upper center">
+            <FlexBox height="100px" alignItems="Start" justifyContent="Center">
+              <Button text="Animal CRUD" type="Emphasized" class="sapUiSmallMarginEnd" press="goToPadCRUD" />
+              <Button text="All function examples" type="Emphasized" class="sapUiSmallMarginEnd" press="goToPagFunctions" />
+            </FlexBox>
+          </Panel>
         </content>
       </Page>
     </pages>

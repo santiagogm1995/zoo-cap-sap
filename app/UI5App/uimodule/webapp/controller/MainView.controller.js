@@ -11,7 +11,7 @@ sap.ui.define(
     return Controller.extend("com.myorg.myUI5App.controller.MainView", {
       onInit: function () {
         oView = this.getView();
-
+        
         var url = "/getAnimals";
         jQuery.ajax({
           url: url,
@@ -27,6 +27,10 @@ sap.ui.define(
             console.log(e.message);
           },
         });
+      },
+
+      goToPadCRUD: function () {
+        console.log("hola");
       },
     });
   }

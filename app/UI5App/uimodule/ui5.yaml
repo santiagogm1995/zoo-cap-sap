@@ -1,4 +1,4 @@
-specVersion: "2.0"
+specVersion: "1.0"
 metadata:
   name: myUI5App_uimodule
 type: application
@@ -27,10 +27,16 @@ server:
         debug: true
         port: 1091
         xsappJson: approuter/xs-app.json
-        destinations: []
+        destinations:
+          [
+            {
+              "name": "getAnimals",
+              "url": "https://zooinnode-srv-wise-platypus-kh.cfapps.eu10.hana.ondemand.com/anon/",
+            },
+          ]
 builder:
   customTasks:
-    -  name: "ui5-task-zipper"
-       afterTask: "uglify"
-       configuration:
-         archiveName: "uimodule"
+    - name: "ui5-task-zipper"
+      afterTask: "uglify"
+      configuration:
+        archiveName: "uimodule"
