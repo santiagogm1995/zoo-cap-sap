@@ -10,27 +10,10 @@ sap.ui.define(
 
     return Controller.extend("com.myorg.myUI5App.controller.MainView", {
       onInit: function () {
-        oView = this.getView();
-        
-        var url = "/getAnimals";
-        jQuery.ajax({
-          url: url,
-          type: "GET",
-          dataType: "json",
-          success: function (result) {
-            console.log("*****************Inside success " + result);
-            var oModel = new JSONModel({ AnimalsCollection: result.value });
-            oView.setModel(oModel);
-          },
-          error: function (e) {
-            // log error in browser
-            console.log(e.message);
-          },
-        });
       },
 
       goToPadCRUD: function () {
-        console.log("hola");
+        this.navTo("PaginaCrud", {}, true);
       },
     });
   }

@@ -1,0 +1,49 @@
+<mvc:View controllerName="com.myorg.myUI5App.controller.PaginaCrud" displayBlock="true"
+  xmlns="sap.m"
+  xmlns:mvc="sap.ui.core.mvc">
+  <App>
+    <pages>
+      <Page title="{i18n>title}" showNavButton="true" navButtonPress="onNavBack">
+        <content>
+          <Panel headerText="Upper center">
+            <Table id="idProductsTable" inset="false" items="{
+                path: '/AnimalsCollection',
+                sorter: {
+                  path: 'Name'
+                }
+              }">
+              <headerToolbar>
+                <OverflowToolbar>
+                  <content>
+                    <Title text="Books" level="H2"/>
+                  </content>
+                </OverflowToolbar>
+              </headerToolbar>
+              <infoToolbar>
+                <OverflowToolbar>
+                  <Label text="Wide range of available products"/>
+                </OverflowToolbar>
+              </infoToolbar>
+              <columns>
+                <Column width="12em">
+                  <Text text="nombre" />
+                </Column>
+                <Column width="12em">
+                  <Text text="tipo" />
+                </Column>
+              </columns>
+              <items>
+                <ColumnListItem>
+                  <cells>
+                    <Text text="{nombre}" />
+                    <Text text="{typo}" />
+                  </cells>
+                </ColumnListItem>
+              </items>
+            </Table>
+          </Panel>
+        </content>
+      </Page>
+    </pages>
+  </App>
+</mvc:View>

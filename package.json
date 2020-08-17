@@ -17,7 +17,8 @@
     "build": "cds build",
     "deploy-db": "cds deploy",
     "start-cmd": "cds run",
-    "start": "npx cds run"
+    "start": "npx cds run",
+    "start-local": "run-s build deploy-db start-cmd"
   },
   "cds": {
     "hana": {

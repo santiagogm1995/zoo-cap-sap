@@ -65,16 +65,23 @@
         "routerClass": "sap.m.routing.Router",
         "viewType": "XML",
         "viewPath": "com.myorg.myUI5App.view",
-        "controlId": "idAppControl",
+        "controlId": "app",
         "controlAggregation": "pages",
         "async": true
       },
       "routes": [
         {
           "name": "RouteMainView",
-          "pattern": "RouteMainView",
+          "pattern": "",
           "target": [
             "TargetMainView"
+          ]
+        },
+        {
+          "name": "PaginaCrud",
+          "pattern": "PaginaCrud",
+          "target": [
+            "PaginaCrud"
           ]
         }
       ],
@@ -82,8 +89,13 @@
         "TargetMainView": {
           "viewType": "XML",
           "viewLevel": 1,
-          "viewId": "idAppControl",
+          "viewId": "app",
           "viewName": "MainView"
+        },
+        "PaginaCrud": {
+          "viewType": "XML",
+          "viewLevel": 2,
+          "viewName": "PaginaCrud"
         }
       }
     }

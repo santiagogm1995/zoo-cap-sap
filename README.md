@@ -1,23 +1,37 @@
 # Getting Started
 
-Welcome to your new project.
+For deploy in Hana CLoud: 
 
-It contains these folders and files, following our recommended project layout:
+In package.json:
 
-| File / Folder  | Purpose                              |
-| -------------- | ------------------------------------ |
-| `app/`         | content for UI frontends go here     |
-| `db/`          | your domain models and data go here  |
-| `srv/`         | your service models and code go here |
-| `package.json` | project metadata and configuration   |
-| `readme.md`    | this getting started guide           |
+"cds": {
+    "hana": {
+      "deploy-format": "hdbtable"
+    },
+    "requires": {
+      "db": {
+        "kind": "hana"
+      }
+    }
 
-## Next Steps...
+- cd gen/db
+- npm install
+- cf create-service-key zoo-container default
+- hana-cli serviceKey zoo-container default
+- npm start
 
-- Open a new terminal and run `cds watch`
-- ( in VSCode simply choose _**Terminal** > Run Task > cds watch_ )
-- Start adding content, e.g. a [db/schema.cds](db/schema.cds), ...
+For deploy in SQL Lite:
 
-## Learn more...asdasd
+In package.json
 
-Learn more at https://cap.cloud.sap/docs/get-started/
+"cds": {
+    "requires": {
+      "db": {
+        "kind": "sql"
+      }
+    }
+
+- root
+- npm run start-local
+
+
