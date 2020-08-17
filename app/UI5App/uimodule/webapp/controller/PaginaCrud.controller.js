@@ -12,7 +12,7 @@ sap.ui.define(
       onInit: function () {
         oView = this.getView();
 
-        var url = "/getAnimals";
+        var url = "/anon/getAnimals";
         jQuery.ajax({
           url: url,
           type: "GET",

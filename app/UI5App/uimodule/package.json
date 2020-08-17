@@ -7,7 +7,8 @@
     "test": "test"
   },
   "dependencies": {
-    "@sap/approuter": "^6.8.2"
+    "@sap/approuter": "^6.8.2",
+    "ui5-middleware-simpleproxy": "^0.2.0"
   },
   "scripts": {
     "start": "node node_modules/@sap/approuter/approuter.js"
