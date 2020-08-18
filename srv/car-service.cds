@@ -1,17 +1,11 @@
 using {zoo} from '../db/schema';
 
-service CatalogService @(path : '/user')@(requires : 'admin') {
-
-  /**
-   * Entidad que solo permite lectura
-   */
-  @readonly
-  entity Animal        as projection on zoo.Animal;
+service CatalogService @(requires : 'superAdmin') {
 
   /**
    * Entidad con autentificacion
    */
-  entity AnimalConAuth as projection on zoo.Animal;
+  entity AnimalSinAuth as projection on zoo.Animal;
   /**
    * Hola mundo
    */
